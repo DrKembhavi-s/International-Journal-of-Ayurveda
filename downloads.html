@@ -273,8 +273,71 @@
             }
         }
     </style>
+    <style>
+        #backToHomeBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #1A2B4C;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+            z-index: 9999;
+            border: 2px solid #C8932A;
+        }
+        #backToHomeBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #backToHomeBtn:hover {
+            background: #2c4270;
+        }
+        #backToHomeBtn svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+        }
+        @media (max-width: 600px) {
+            #backToHomeBtn {
+                bottom: 18px;
+                right: 18px;
+                width: 46px;
+                height: 46px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="color: white; text-decoration: none;">International Journal of Ayurveda</a></h1>
+            <p class="tagline">Document Downloads</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="https://submit.internationaljournalofayurveda.org/index.php/ija/about/submissions" target="_blank" rel="noopener">Submit Article</a></li>
+                    <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                    <li><a href="peer-review-policy.html">Peer Review</a></li>
+                    <li><a href="#" class="active">Downloads</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="downloads-container">
         <div class="downloads-header">
             <h1>Document Downloads</h1>
@@ -554,6 +617,30 @@
                 }
             });
         });
+    </script>
+    <a href="index.html" id="backToHomeBtn" aria-label="Back to Home" title="Back to Home">
+        <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+    </a>
+    <script>
+        (function () {
+            var btn = document.getElementById('backToHomeBtn');
+            var isHomePage = /(^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+            if (isHomePage) {
+                btn.removeAttribute('href');
+                btn.style.cursor = 'pointer';
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+        })();
     </script>
 </body>
 </html>
