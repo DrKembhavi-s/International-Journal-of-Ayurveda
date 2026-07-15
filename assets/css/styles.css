@@ -762,3 +762,26 @@ nav ul li a:hover:before {
         display: none;
     }
 }
+
+/* Editorial Board Photos */
+.editor-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    float: left;
+    margin: 0 20px 10px 0;
+    border: 2px solid #C8932A;
+}
+
+.editor-card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.editor-card h4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: #2a5298;
+}
