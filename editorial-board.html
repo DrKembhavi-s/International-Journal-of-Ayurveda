@@ -7,6 +7,72 @@
     <meta name="description" content="Editorial Board members of International Journal of Ayurveda">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/guidelines.css">
+    <style>
+        .editor-photo {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+            float: left;
+            margin: 0 20px 10px 0;
+            border: 2px solid #C8932A;
+        }
+        .editor-card::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .editor-card h4 {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    </style>
+    <style>
+        #backToHomeBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #1A2B4C;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+            z-index: 9999;
+            border: 2px solid #C8932A;
+        }
+        #backToHomeBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #backToHomeBtn:hover {
+            background: #2c4270;
+        }
+        #backToHomeBtn svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+        }
+        @media (max-width: 600px) {
+            #backToHomeBtn {
+                bottom: 18px;
+                right: 18px;
+                width: 46px;
+                height: 46px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -59,20 +125,31 @@
 
                     <div class="editor-card">
                         <h3>Associate Editor — Clinical Research</h3>
-                        <p><em>Position Open</em></p>
-                        <p>Responsible for overseeing manuscripts in clinical Ayurvedic research including RCTs, observational studies, case studies, and comparative effectiveness research.</p>
+                        <h4>Dr. Suprabha Hegde</h4>
+                        <p>MS (Shalya Tantra), BAMS, PG Diploma in Clinical Research | Lead – Research, Apollo AyurVAID Hospitals, Bangalore</p>
+                        <div class="editor-bio">
+                            <p>Dr. Hegde leads research at Apollo AyurVAID Hospitals, Bangalore, managing end-to-end clinical trials in integrative Ayurvedic care, including Ministry of AYUSH-sponsored studies. With over 15 years of experience spanning clinical practice, herbal product development, and regulatory research, she has authored multiple peer-reviewed publications in Ayurveda and integrative medicine.</p>
+                        </div>
                     </div>
 
                     <div class="editor-card">
+                        <img src="assets/images/board-vrinda-bhat.jpg" alt="Dr. Vrinda Bhat" class="editor-photo">
                         <h3>Associate Editor — Fundamental Sciences</h3>
-                        <p><em>Position Open</em></p>
-                        <p>Responsible for manuscripts in pharmacology, phytochemistry, drug standardization, safety, and toxicology.</p>
+                        <h4>Dr. Vrinda Bhat</h4>
+                        <p>MD (Rasashastra &amp; Bhaishajya Kalpana), BAMS | Research Officer, Jayadeva Memorial Rashtrotthana Hospital and Research Centre</p>
+                        <div class="editor-bio">
+                            <p>Dr. Bhat holds an MD in Rasashastra and Bhaishajya Kalpana (Ayurvedic Pharmacology) and brings over eight years of research experience, including as Senior Research Fellow at the Central Ayurveda Research Institute under CCRAS, Ministry of AYUSH. Her work spans pharmaceutical standardization, phytochemical analysis, and clinical trials in diabetes management, with ten peer-reviewed publications.</p>
+                        </div>
                     </div>
 
                     <div class="editor-card">
+                        <img src="assets/images/board-khalid-bm.jpg" alt="Dr. Khalid B.M" class="editor-photo">
                         <h3>Associate Editor — Traditional Knowledge &amp; Classical Studies</h3>
-                        <p><em>Position Open</em></p>
-                        <p>Responsible for manuscripts on classical formulations, theoretical foundations, historiography, and documentation of traditional knowledge.</p>
+                        <h4>Dr. Khalid B.M</h4>
+                        <p>MD (Ayu) Samhita and Sidhanta | Associate Professor, Spoorthi Ayurveda Medical College and Dr. S.V. Savadi Ayurvedic Hospital, Gangavathi, Karnataka</p>
+                        <div class="editor-bio">
+                            <p>Dr. Khalid is Associate Professor of Samhita and Sidhanta and Chief Coordinator of the Avishkara Central Research Laboratory at SJG Ayurvedic Medical College &amp; Hospital, Koppal, with seven years of research and postgraduate teaching experience. An RGUHS-approved research examiner, he has authored a textbook on Research Methodology and Biostatistics in Ayurveda alongside peer-reviewed work on validated clinical assessment scales.</p>
+                        </div>
                     </div>
 
                     <div class="editor-card">
@@ -119,8 +196,13 @@
                     </div>
 
                     <div class="editor-card">
+                        <img src="assets/images/board-madhumitha-s.jpg" alt="Dr. Madhumitha S" class="editor-photo">
                         <h3>Section Editor — Ayurvedic Education &amp; Institutional Policy</h3>
-                        <p><em>Position Open</em></p>
+                        <h4>Dr. Madhumitha S</h4>
+                        <p>MD (Ayurveda) Samhita &amp; Siddhanta, MSc Psychology, PhD Scholar | Ayurvedic Physician, Chennai</p>
+                        <div class="editor-bio">
+                            <p>Dr. Madhumitha is an Ayurvedic physician and PhD scholar with over four years of clinical, academic, and research experience, including as Senior Research Fellow under CCRAS, Ministry of AYUSH. She has presented at fourteen national and international conferences and published on classical Ayurvedic literature and integrative oncology care.</p>
+                        </div>
                     </div>
                 </section>
 
@@ -130,8 +212,11 @@
                     <p>The Statistical Editor reviews the biostatistical and methodological soundness of submitted manuscripts.</p>
                     <div class="editor-card">
                         <h3>Statistical Editor</h3>
-                        <p><em>Position Open</em></p>
-                        <p>Applicants should have demonstrated expertise in biostatistics and research methodology, preferably in the context of clinical or health sciences research.</p>
+                        <h4>Dr. Ilavarasi K</h4>
+                        <p>BDS, MPH (Gold Medalist) — Epidemiology &amp; Biostatistics | Project Research Scientist, AIIMS Madurai</p>
+                        <div class="editor-bio">
+                            <p>Dr. Ilavarasi holds a Master of Public Health in Epidemiology and Biostatistics, completed as a gold medalist, and currently serves as a Project Research Scientist at AIIMS Madurai. She brings extensive experience in biostatistical analysis, large-scale survey research, and data quality monitoring across national public health projects, including work with ICMR-NCDIR and NFHS.</p>
+                        </div>
                     </div>
                 </section>
 
@@ -163,8 +248,13 @@
                             <p><em>Position Open</em></p>
                         </div>
                         <div class="editor-card">
+                            <img src="assets/images/board-sathyanarayana-b.jpg" alt="Dr. Sathyanarayana B" class="editor-photo">
                             <h3>Senior Advisor — Pharmacology &amp; Drug Development</h3>
-                            <p><em>Position Open</em></p>
+                            <h4>Dr. Sathyanarayana B</h4>
+                            <p>MD (Ayurveda) — Bhaishajya Kalpana | Principal, Medical Superintendent &amp; Director R&amp;D, Muniyal Institute of Ayurveda Medical Sciences, Manipal</p>
+                            <div class="editor-bio">
+                                <p>Dr. Sathyanarayana is Principal, Medical Superintendent, and Director of Research &amp; Development at Muniyal Institute of Ayurveda Medical Sciences, Manipal, with 25 years of experience in Ayurvedic pharmaceutics. He has published over 25 research papers, serves on the Ayurveda subcommittee of the Pharmacopoeia Commission for Indian Medicine, and chairs the PG Syllabus Committee for Rasashastra and Bhaishajya Kalpana at NCISM.</p>
+                            </div>
                         </div>
                         <div class="editor-card">
                             <h3>Senior Advisor — Traditional Knowledge Systems</h3>
@@ -214,5 +304,29 @@
             <p>© 2025 International Journal of Ayurveda. Published by Astanga Wellness Pvt Ltd.</p>
         </div>
     </footer>
+    <a href="index.html" id="backToHomeBtn" aria-label="Back to Home" title="Back to Home">
+        <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10"/></svg>
+    </a>
+    <script>
+        (function () {
+            var btn = document.getElementById('backToHomeBtn');
+            var isHomePage = /(^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+            if (isHomePage) {
+                btn.removeAttribute('href');
+                btn.style.cursor = 'pointer';
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
